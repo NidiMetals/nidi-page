@@ -1,383 +1,404 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo NIDI | Soluciones Industriales</title>
+
+<title>Grupo NIDI | Distribuidor Directo Pomok</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#f5f7fa;
-    color:#333;
+background:#f4f7fb;
+color:#222;
 }
 
 header{
-    background:#0c2147;
-    color:white;
-    padding:20px 50px;
+background:#081f4d;
+padding:15px 50px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav img{
+height:70px;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
+display:flex;
+list-style:none;
+gap:25px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-    background:linear-gradient(rgba(0,51,102,.85),rgba(0,51,102,.85)),
-    url('https://images.unsplash.com/photo-1517048676732-d65bc937f952');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:100px 20px;
+background:
+linear-gradient(rgba(0,20,80,.80),rgba(0,20,80,.80)),
+url("https://images.unsplash.com/photo-1565008447742-97f6f38c985c");
+background-size:cover;
+background-position:center;
+color:white;
+padding:100px 10%;
 }
 
 .hero h1{
-    font-size:3rem;
-    margin-bottom:15px;
+font-size:55px;
+margin-bottom:15px;
 }
 
 .hero h2{
-    margin-bottom:25px;
-    font-weight:normal;
+font-size:28px;
+margin-bottom:20px;
+font-weight:normal;
 }
 
-.cobertura{
-    margin:25px 0;
-    font-size:18px;
+.hero p{
+max-width:700px;
+font-size:18px;
+line-height:1.7;
 }
 
 .botones{
-    margin-top:30px;
+margin-top:35px;
 }
 
 .btn{
-    display:inline-block;
-    margin:10px;
-    padding:14px 25px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
+display:inline-block;
+padding:15px 25px;
+margin-right:15px;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.btn-primary{
-    background:#ff6600;
-    color:white;
+.btn-azul{
+background:#00AEEF;
+color:white;
 }
 
-.btn-success{
-    background:#25D366;
-    color:white;
-}
-
-.btn-outline{
-    background:white;
-    color:#003366;
+.btn-whatsapp{
+background:#25D366;
+color:white;
 }
 
 section{
-    padding:70px 10%;
+padding:80px 8%;
 }
 
 .titulo{
-    text-align:center;
-    margin-bottom:40px;
-    color:#003366;
+color:#081f4d;
+font-size:38px;
+margin-bottom:40px;
+text-align:center;
 }
 
-.nosotros{
-    background:white;
-}
-
-.productos{
-    background:#eef3f8;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.info{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
-}
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
 .card h3{
-    margin-bottom:10px;
+color:#003399;
+margin-bottom:15px;
 }
 
-.card ul{
-    margin:15px 0;
-    padding-left:20px;
+.card p{
+line-height:1.6;
 }
 
-.card a{
-    display:inline-block;
-    margin-top:10px;
+.productos{
+background:#081f4d;
+color:white;
 }
 
-.mapa{
-    text-align:center;
-    background:white;
+.productos-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.mapa img{
-    max-width:700px;
-    width:100%;
-    margin-top:20px;
+.producto{
+background:#10357f;
+padding:25px;
+border-radius:12px;
 }
 
-.formulario{
-    background:#eef3f8;
+.producto h3{
+margin-bottom:15px;
 }
 
-form{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
+.producto p{
+line-height:1.6;
 }
 
-input, textarea{
-    width:100%;
-    padding:14px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.industrias{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-button{
-    background:#003366;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    cursor:pointer;
-    border-radius:5px;
+.industria{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,.12);
 }
 
-footer{
-    background:#003366;
-    color:white;
-    text-align:center;
-    padding:20px;
+.industria h3{
+color:#003399;
+margin-bottom:15px;
+}
+
+.footer{
+background:#081f4d;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+.whatsapp-fijo{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0px 4px 10px rgba(0,0,0,.30);
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <nav>
-<img src="logo.jpeg" alt="GRUPO NIDI" style="height:90px;">
+
+<img src="logo.jpeg" alt="Grupo NIDI" style="height: 70px;">
 
 <ul>
 <li><a href="#inicio">Inicio</a></li>
-<li><a href="#nosotros">Nosotros</a></li>
 <li><a href="#productos">Productos</a></li>
-<li><a href="#cobertura">Cobertura</a></li>
-<li><a href="#cotizacion">Cotización</a></li>
+<li><a href="#industrias">Industrias</a></li>
+<li><a href="#contacto">Contacto</a></li>
 </ul>
 
 </nav>
+
 </header>
 
 <section class="hero" id="inicio">
 
-<h1>GRUPO NIDI</h1>
+<h1>Distribuidor Directo de Pomok®</h1>
 
-<h2>Soluciones Industriales</h2>
+<h2>Soluciones químicas para limpieza, mantenimiento y desinfección industrial</h2>
 
-<p><strong>Distribuidor Autorizado Pomok Región Centro</strong></p>
-
-<div class="cobertura">
-CDMX • Estado de México • Hidalgo • Morelos
-</div>
+<p>
+Grupo NIDI proporciona productos especializados para industrias alimenticias,
+cementeras, manufactureras, automotrices e institucionales.
+</p>
 
 <div class="botones">
 
-<a href="#cotizacion" class="btn btn-primary">
+<a href="#contacto" class="btn btn-azul">
 Solicitar Cotización
 </a>
 
-<a href="https://wa.me/5215512345678" class="btn btn-success">
-Hablar por WhatsApp
-</a>
-
-<a href="#productos" class="btn btn-outline">
-Ver Catálogo
+<a href="https://wa.me/528127460945" class="btn btn-whatsapp">
+WhatsApp
 </a>
 
 </div>
 
 </section>
 
-<section class="nosotros" id="nosotros">
+<section>
 
-<h2 class="titulo">Nosotros</h2>
+<h2 class="titulo">
+¿Por qué elegir Grupo NIDI?
+</h2>
 
-<p style="max-width:900px;margin:auto;text-align:center;line-height:1.8;">
-Grupo NIDI es una empresa especializada en soluciones industriales orientadas al suministro de productos, desarrollo de proyectos y atención profesional a clientes del sector industrial, comercial y de mantenimiento. Nuestra experiencia comercial y estructura organizacional nos permite brindar cobertura regional con atención cercana y eficiente.
-</p>
+<div class="info">
+
+<div class="card">
+<h3>✅ Distribución Directa</h3>
+<p>Acceso directo a la línea de productos Pomok para múltiples aplicaciones industriales.</p>
+</div>
+
+<div class="card">
+<h3>✅ Asesoría Técnica</h3>
+<p>Recomendaciones especializadas para mantenimiento, higiene industrial y limpieza técnica.</p>
+</div>
+
+<div class="card">
+<h3>✅ Cobertura Regional</h3>
+<p>CDMX, Estado de México, Hidalgo y Morelos con atención profesional.</p>
+</div>
+
+</div>
 
 </section>
 
 <section class="productos" id="productos">
 
-<h2 class="titulo">Productos Pomok</h2>
+<h2 class="titulo" style="color:white;">
+Productos Destacados Pomok
+</h2>
 
-<div class="grid">
+<div class="productos-grid">
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12" alt="">
-<div class="card-content">
-<h3>Lubricantes</h3>
-<p>Soluciones para equipos industriales.</p>
-<ul>
-<li>Aplicaciones industriales</li>
-<li>Diversas presentaciones</li>
-<li>Ficha técnica PDF</li>
-</ul>
-<a href="#cotizacion" class="btn btn-primary">Cotizar</a>
-</div>
+<div class="producto">
+<h3>LABOLEX</h3>
+<p>Desengrasante industrial para limpieza profunda de maquinaria y superficies.</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7" alt="">
-<div class="card-content">
-<h3>Grasas</h3>
-<p>Protección y rendimiento.</p>
-<ul>
-<li>Alta resistencia</li>
-<li>Uso industrial</li>
-<li>Ficha técnica PDF</li>
-</ul>
-<a href="#cotizacion" class="btn btn-primary">Cotizar</a>
-</div>
+<div class="producto">
+<h3>DIELEX 40</h3>
+<p>Solvente dieléctrico para componentes eléctricos y electrónicos.</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" alt="">
-<div class="card-content">
-<h3>Especialidades</h3>
-<p>Productos específicos para mantenimiento.</p>
-<ul>
-<li>Aplicaciones especializadas</li>
-<li>Presentaciones variadas</li>
-<li>Ficha técnica PDF</li>
-</ul>
-<a href="#cotizacion" class="btn btn-primary">Cotizar</a>
-</div>
+<div class="producto">
+<h3>DREK 30</h3>
+<p>Desincrustante industrial para sarro severo y mantenimiento especializado.</p>
 </div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952" alt="">
-<div class="card-content">
-<h3>Industria y Mantenimiento</h3>
-<p>Soluciones integrales.</p>
-<ul>
-<li>Atención profesional</li>
-<li>Cobertura regional</li>
-<li>Ficha técnica PDF</li>
-</ul>
-<a href="#cotizacion" class="btn btn-primary">Cotizar</a>
+<div class="producto">
+<h3>AW 22</h3>
+<p>Desengrasante alcalino para aplicaciones industriales y alimenticias.</p>
 </div>
+
+<div class="producto">
+<h3>BACFREEN</h3>
+<p>Desinfectante y bactericida para procesos sanitarios.</p>
+</div>
+
+<div class="producto">
+<h3>SANICLOR</h3>
+<p>Detergente alcalino clorado para industria alimenticia.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="mapa" id="cobertura">
+<section id="industrias">
 
-<h2 class="titulo">Cobertura Regional</h2>
+<h2 class="titulo">
+Sectores que Atendemos
+</h2>
 
-<p>
-Cobertura comercial y atención especializada en la región centro del país.
-</p>
+<div class="industrias">
 
-<h3 style="margin-top:20px;">
-📍 Ciudad de México<br><br>
-📍 Estado de México<br><br>
-📍 Hidalgo<br><br>
-📍 Morelos
-</h3>
+<div class="industria">
+<h3>🏭 Cementera</h3>
+<p>Limpieza de maquinaria e incrustaciones.</p>
+</div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Mexico_location_map.svg" alt="Mapa de México">
+<div class="industria">
+<h3>🍽 Alimenticia</h3>
+<p>Sanitización y desinfección profesional.</p>
+</div>
+
+<div class="industria">
+<h3>🚗 Automotriz</h3>
+<p>Mantenimiento y limpieza especializada.</p>
+</div>
+
+<div class="industria">
+<h3>⚙ Industrial</h3>
+<p>Máximo desempeño para equipos y procesos.</p>
+</div>
+
+<div class="industria">
+<h3>🏢 Institucional</h3>
+<p>Higiene integral para instalaciones.</p>
+</div>
+
+</div>
 
 </section>
 
-<section class="formulario" id="cotizacion">
+<section id="contacto">
 
 <h2 class="titulo">
 Solicita una Cotización
 </h2>
 
-<form>
+<div class="card" style="max-width:700px;margin:auto;text-align:center;">
 
-<input type="text" placeholder="Nombre" required>
+<h3>Grupo NIDI</h3>
 
-<input type="text" placeholder="Empresa">
+<p><strong>Email:</strong> comercial@nidiquim.com.mx</p>
 
-<input type="tel" placeholder="Teléfono" required>
+<br>
 
-<input type="email" placeholder="Correo electrónico" required>
+<p><strong>Teléfono:</strong> 8127460945</p>
 
-<input type="text" placeholder="Producto de interés">
+<br>
 
-<textarea rows="5" placeholder="Comentarios"></textarea>
+<p>
+Cobertura: Ciudad de México, Estado de México, Hidalgo y Morelos.
+</p>
 
-<button type="submit">
-Enviar Solicitud
-</button>
-
-</form>
+</div>
 
 </section>
 
-<footer>
+<footer class="footer">
 
-<p>
-© 2026 Grupo NIDI | Soluciones Industriales
-</p>
+<h3>Grupo NIDI</h3>
+
+<p>Distribuidor Directo Pomok®</p>
+
+<br>
+
+<p>comercial@nidiquim.com.mx</p>
+
+<p>8127460945</p>
 
 </footer>
+
+<a class="whatsapp-fijo" href="https://wa.me/528127460945">
+📱
+</a>
 
 </body>
 </html>
